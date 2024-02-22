@@ -1,12 +1,15 @@
-function invertirTexto(texto) {
-    // La función recibe un argumento "texto" que es un string.
-    // Tu objetivo es invertir el string y devolver el string invertido.
+function encontrarElementoRepetido(numeros) {
+    // La función recibe un argumento "numeros" que es un array de números.
+    // Retorna el primer elemento repetido que se encuentre en el array.
     // Tu código:
-    let arreglo = [];
-    for(let i= (texto.length) ; i >= 0; i--){
-        arreglo.push(texto.charAt(i))
+    for (let i = 0; i < numeros.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (numeros[i] === numeros[j]) {
+                return numeros[i];
+            }
+        }
     }
-    palabraAlReves = arreglo.join('')
-    return palabraAlReves
 }
-console.log(invertirTexto('roma'))
+
+    console.log(encontrarElementoRepetido([1, 2, 3, 3, 4, 5]))
+
